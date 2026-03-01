@@ -1,4 +1,4 @@
-# modelrelay
+# 🚀 modelrelay
 
 [![npm version](https://img.shields.io/npm/v/modelrelay?color=green&style=flat-square)](https://npmjs.com/package/modelrelay)
 [![GitHub stars](https://img.shields.io/github/stars/ellipticmarketing/modelrelay?style=flat-square)](https://github.com/ellipticmarketing/modelrelay/stargazers)
@@ -6,17 +6,33 @@
 
 [**Join our Discord**](https://discord.gg/FxseNnd5) for discussions, feature requests, and community support.
 
-**Auto-routing** • **80+ Free Models** • **10+ Providers** • **OpenAI-compatible**
+<div align="center">
+  <img src="docs/assets/dashboard.png" alt="ModelRelay Dashboard" width="100%">
+  <br/>
+  <p><i>The smartest, fastest, and completely free local router for your AI coding needs.</i></p>
+</div>
 
-OpenAI-compatible local router that benchmarks free coding models across providers and forwards requests to the best available model.
+---
 
-## Install
+### 🔥 100% Free • Auto-Routing • 80+ Models • 10+ Providers • OpenAI-Compatible
+
+**modelrelay** is an OpenAI-compatible local router that benchmarks free coding models across top providers and automatically forwards your requests to the best available model. 
+
+### ✨ Why use modelrelay?
+
+- 💸 **Completely Free:** Stop paying for API usage. We seamlessly provide access to robust free models.
+- 🧠 **State-of-the-Art (SOTA) Models:** Out-of-the-box availability for top-tier models including **Kimi K2.5, Minimax M2.5, GLM 5, Deepseek V3.2**, and more.
+- 🏢 **Reliable Providers:** We route requests securely through trusted, high-performance platforms like **NVIDIA, Groq, OpenRouter, and Google**.
+- ⚡ **Lightning Fast:** The built-in benchmark continually evaluates metrics to pick the fastest and most capable LLM for your request.
+- 🔄 **OpenAI-Compatible:** A perfect drop-in replacement that works seamlessly with your existing tools, scripts, and workflows.
+
+## 🚀 Install
 
 ```bash
 npm install -g modelrelay
 ```
 
-## Quick Start
+## ⚡ Quick Start
 
 ```bash
 # 1) Onboard: save provider API keys and optionally auto-configure integrations
