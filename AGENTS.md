@@ -16,7 +16,8 @@ This ensures the codebase remains in a working state at all times.
 
 ## Git Commits
 
-When making a commit on behalf of the user, NEVER prefix your commit message with `fix:`, `feature:`, `feat:`, `chore:`, or any other prefix. Just write a descriptive sentence.
+When making a commit on behalf of the user, NEVER prefix your commit message with `fix:`, `feature:`, `feat:`, `chore:`, or any other prefix. 
+Just write a descriptive sentence of what was changed.
 
 ## Release Process (MANDATORY)
 
@@ -25,15 +26,15 @@ When releasing a new version, follow this exact process:
 1. **Version Check**: Check if version already exists with `git log --oneline | grep "^[a-f0-9]\+ [0-9]"`
 2. **Version Bump**: Update version in `package.json`. If the releas only includes bug 
 fixes, bump a patch version  (e.g., `0.1.16` → `0.1.17`). If it includes new features, bump a minor version  (e.g., `0.1.16` → `0.2.0`)
-3. **Commit ALL Changed Files**: `git add . && git commit -m "0.1.17"`
-   - Always commit with just the version number as the message (e.g., "0.1.17")
+3. **Commit ALL Changed Files**: `git add . && git commit -m "Fixed issue with autostart"`
+   - Always commit using a description of what was changed as the commit message. 
    - Include ALL modified files in the commit (bin/, lib/, test/, README.md, etc.)
 4. **Push**: `git push origin main` — GitHub Actions will auto-publish to npm
 5. **Create GitHub Release**:
    ```bash
    gh release create VERSION --title "VERSION" --notes "Release notes"
    ```
-   (e.g., `gh release create 1.5.0 --title "1.5.0" --notes "Bug fixes and new features"`)
+   (e.g., `gh release create 1.5.0 --title "1.5.0" --notes "Fixed an issue with ABC"`)
 6. **Wait for npm Publish":
    ```bash
    for i in $(seq 1 30); do sleep 10; v=$(npm view modelrelay version 2>/dev/null); echo "Attempt $i: npm version = $v"; if [ "$v" = "0.1.17" ]; then echo "✅ published!"; break; fi; done
@@ -80,10 +81,4 @@ fixes, bump a patch version  (e.g., `0.1.16` → `0.1.17`). If it includes new f
 - **Core logic** — getAvg, getVerdict, getUptime, sortResults, findBestModel
 - **CLI arg parsing** — current router flags (`--port`, `--no-log`, `--ban`, `--onboard`)
 - **Package sanity** — package.json fields, bin entry exists, shebang, ESM imports
-
-## GitHub Contributors
-
-When new PRs are merged, add the contributor's GitHub handle to the footer in `bin/modelrelay.js` (the `Contributors:` line near line 775), separated by spaces. Also update this list:
-
-- @whit3rabbit
 
